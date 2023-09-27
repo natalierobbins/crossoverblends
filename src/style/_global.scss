@@ -1,0 +1,66 @@
+body {
+    background-color: $grey;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    font-family: 'Cousine', Courier, monospace;
+    font-style: italic;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 0.75px;
+    color: $purple-dark;
+    transition: all 1s ease;
+}
+
+a:hover {
+    word-spacing: 5px;
+}
+
+.venn-circle {
+    border-radius: 100%;
+    border: 1px solid $purple-dark;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    mix-blend-mode: darken;
+
+    &.apple {
+        background-color: $red;
+    }
+
+    &.spotify {
+        background-color: $green;
+    }
+
+    &.landing {
+
+        $landing-size: 250px;
+        height: $landing-size;
+        width: $landing-size;
+
+        &.spotify {
+            @include venn-overlap-width($landing-size);
+            @include venn-landing-offset($landing-size)
+        }
+    }
+
+    &.playlist {
+
+        $playlist-size: 50px;
+        height: $playlist-size;
+
+        &.spotify {
+            @include venn-overlap-width($playlist-size);
+        }
+    }
+}
+

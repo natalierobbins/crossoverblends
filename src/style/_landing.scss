@@ -1,0 +1,19 @@
+#landing-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    gap: 50px;
+}
+
+#log-in-wrapper {
+    gap: 30px;
+    font-size: 20px;
+    font-weight:400;
+    height: 300px;
+    width: 350px;
+    justify-content: center;
+}
