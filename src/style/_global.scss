@@ -25,6 +25,13 @@ a:hover {
     word-spacing: 5px;
 }
 
+h1 {
+    font-weight: bold;
+    font-style: italic;
+    margin: 0px;
+    font-size: 30px;
+}
+
 .apple {
     background-color: $red;
 }
@@ -89,5 +96,16 @@ a:hover {
             @include venn-landing-offset($icon-size)
         }
     }
+}
+
+.button {
+    border: 0.5px solid $purple-dark;
+    padding: 7px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    font-style: italic;
 }
 

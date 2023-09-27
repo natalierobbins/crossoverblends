@@ -83,6 +83,13 @@ a:hover {
   word-spacing: 5px;
 }
 
+h1 {
+  font-weight: bold;
+  font-style: italic;
+  margin: 0px;
+  font-size: 30px;
+}
+
 .apple {
   background-color: #E37682;
 }
@@ -134,6 +141,17 @@ a:hover {
   margin-top: 25px;
 }
 
+.button {
+  border: 0.5px solid #3C292D;
+  padding: 7px;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-style: italic;
+}
+
 #landing-wrapper {
   position: absolute;
   top: 50%;
@@ -171,6 +189,7 @@ a:hover {
   display: flex;
   width: 100%;
   justify-content: center;
+  align-content: center;
   flex-direction: column;
 }
 
@@ -207,4 +226,41 @@ a:hover {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+}
+
+#dashboard-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+  gap: 25px;
+}
+
+#divider {
+  height: 0.75px;
+  width: 100%;
+  background-color: #D6CACD;
+  display: block;
+}
+
+.blend-title-opts-wrapper {
+  display: flex;
+}
+.blend-title-opts-wrapper > a {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 20px;
+}
+
+#dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#export {
+  background-color: #D6CACD;
 }/*# sourceMappingURL=main.css.map */
