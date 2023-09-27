@@ -15,11 +15,11 @@ $desktop-min: 950px;
 
 /* --------------------------------- mix-ins -------------------------------- */
 @mixin venn-overlap-width($width) {
-    margin-left: -($width/2);
+    margin-left: calc( $width * -0.5);
 }
 
 @mixin venn-landing-offset($width) {
-    margin-top: $width/2
+    margin-top: calc($width * 0.5)
 }
 
 /* --------------------------------- styles --------------------------------- */

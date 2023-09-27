@@ -1,4 +1,6 @@
-import { Venn } from './components/venn.js'
+import { Venn } from './components/venn'
+import { Header } from './components/header'
+import { Dash } from './components/dash'
 
 export const Landing = () => {
   return (
@@ -14,8 +16,9 @@ export const Landing = () => {
 
 export const Dashboard = () => {
   return (
-    <div>
-      dash
+    <div id='dashboard-wrapper'>
+      <Header />
+      <Dash />
     </div>
   );
 }

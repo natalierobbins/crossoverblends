@@ -3,6 +3,7 @@ body {
     margin: 0px;
     display: flex;
     justify-content: center;
+    font-family: 'Cousine', Courier, monospace;
 }
 
 #root {
@@ -13,7 +14,6 @@ body {
 }
 
 a {
-    font-family: 'Cousine', Courier, monospace;
     font-style: italic;
     text-underline-offset: 10px;
     text-decoration-thickness: 0.75px;
@@ -25,23 +25,25 @@ a:hover {
     word-spacing: 5px;
 }
 
+.apple {
+    background-color: $red;
+}
+
+.spotify {
+    background-color: $green;
+}
+
 .venn-circle {
     border-radius: 100%;
-    border: 1px solid $purple-dark;
+    border: 0.5px solid $purple-dark;
     width: 100px;
     height: 100px;
     display: flex;
     mix-blend-mode: darken;
 
-    &.apple {
-        background-color: $red;
-    }
-
-    &.spotify {
-        background-color: $green;
-    }
-
     &.landing {
+
+        border-width: 1px;
 
         $landing-size: 250px;
         height: $landing-size;
@@ -67,11 +69,24 @@ a:hover {
 
     &.playlist {
 
-        $playlist-size: 50px;
+        $playlist-size: 25px;
         height: $playlist-size;
+        width: $playlist-size;
 
         &.spotify {
             @include venn-overlap-width($playlist-size);
+        }
+    }
+
+    &.icon {
+
+        $icon-size: 50px;
+        height: $icon-size;
+        width: $icon-size;
+
+        &.spotify {
+            @include venn-overlap-width($icon-size);
+            @include venn-landing-offset($icon-size)
         }
     }
 }
