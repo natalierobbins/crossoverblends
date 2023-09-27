@@ -7,13 +7,25 @@
     align-content: center;
     width: 100%;
     gap: 50px;
+    flex-wrap: wrap;
+
+    @media (max-width: $desktop-min) {
+        flex-direction: column;
+    }
 }
 
 #log-in-wrapper {
+
+    @media (max-width: $mobile-max) {
+        font-size: 15px;
+        width: 300px;
+    }
+
     gap: 30px;
     font-size: 20px;
     font-weight:400;
-    height: 300px;
-    width: 350px;
+    width: 330px;
     justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }

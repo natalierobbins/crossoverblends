@@ -1,6 +1,7 @@
 /* ---------------------------------- fonts --------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;1,400;1,700&display=swap");
 /* --------------------------------- colors --------------------------------- */
+/* ------------------------------- breakpoints ------------------------------ */
 /* --------------------------------- mix-ins -------------------------------- */
 /* --------------------------------- styles --------------------------------- */
 .-full-width {
@@ -102,7 +103,17 @@ a:hover {
 }
 .venn-circle.landing.spotify {
   margin-left: -125px;
-  margin-top: 62.5px;
+  margin-top: 125px;
+}
+@media (max-width: 480px) {
+  .venn-circle.landing {
+    height: 150px;
+    width: 150px;
+  }
+  .venn-circle.landing.spotify {
+    margin-left: -75px;
+    margin-top: 75px;
+  }
 }
 .venn-circle.playlist {
   height: 50px;
@@ -120,13 +131,26 @@ a:hover {
   align-content: center;
   width: 100%;
   gap: 50px;
+  flex-wrap: wrap;
+}
+@media (max-width: 950px) {
+  #landing-wrapper {
+    flex-direction: column;
+  }
 }
 
 #log-in-wrapper {
   gap: 30px;
   font-size: 20px;
   font-weight: 400;
-  height: 300px;
-  width: 350px;
+  width: 330px;
   justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  #log-in-wrapper {
+    font-size: 15px;
+    width: 300px;
+  }
 }/*# sourceMappingURL=main.css.map */

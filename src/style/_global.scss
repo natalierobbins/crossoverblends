@@ -51,6 +51,18 @@ a:hover {
             @include venn-overlap-width($landing-size);
             @include venn-landing-offset($landing-size)
         }
+
+        @media (max-width: $mobile-max) {
+            $mobile-landing-size: 150px;
+            height: $mobile-landing-size;
+            width: $mobile-landing-size;
+
+            &.spotify {
+                @include venn-overlap-width($mobile-landing-size);
+                @include venn-landing-offset($mobile-landing-size)
+            }
+
+        }
     }
 
     &.playlist {
