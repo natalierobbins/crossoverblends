@@ -1,13 +1,15 @@
 export const Dash = () => {
     return (
         <div id='dashboard-content-wrapper'>
-            <div id='dashboard-content-title'>
+            <div id='content-wrapper'>
                 <h1>your blends</h1>
+                <div id='dashboard-content-divider'>
+                    <span id='divider'></span>
+                </div>
+                <div className='dashboard-content'>
+                    <Invite />
+                </div>
             </div>
-            <div id='dashboard-content-divider'>
-                <span id='divider'></span>
-            </div>
-            <BlendList />
         </div>
     )
 }
@@ -18,10 +20,10 @@ const DividerHeaders = () => {
 
 const BlendList = () => {
 
-    var users = ['natalie']
+    var users = ['natalie', 'daivic']
 
     return (
-        <div id='dashboard-content'>
+        <>
             {users.map((item) => {
                 return (
                     <div id={`blend-${item}`} key={`blend-${item}`} className='blend-title-opts-wrapper'>
@@ -30,14 +32,14 @@ const BlendList = () => {
                     </div>
                 )
             })}
-        </div>
+        </>
     )
 
 }
 
 const BlendOpts = () => {
     return (
-        <div id='blend-opts-wrapper'>
+        <div className='blend-opts-wrapper'>
             <div className='button' id='re-sync'>
                 re-sync
             </div>
@@ -52,6 +54,27 @@ const Playlist = () => {
 
 }
 
-const Invite = () => {
+const Empty = () => {
+    return (
+        <div id='empty-wrapper'>
+            <p>you have no blends :(</p>
+            <a href=''>+ create one now!</a>
+        </div>
+    )
+}
 
+const Invite = () => {
+    return (
+        <div id='invite-link-wrapper'>
+            <div id='invite-wrapper'>
+                <div id='invite-title-opts-wrapper'>
+                    <p>invite link</p>
+                    <a href=''>copy to clipboard</a>
+                </div>
+                <div id='invite'>
+                    crossoverblends.web.app/+/ksjdfhldskjfhldskjhfk
+                </div>
+            </div>
+        </div>
+    )
 }

@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Cousine', Courier, monospace;
+    color: $purple-dark;
 }
 
 #root {
@@ -19,6 +20,10 @@ a {
     text-decoration-thickness: 0.75px;
     color: $purple-dark;
     transition: all 1s ease;
+}
+
+p {
+    padding: 0px;
 }
 
 a:hover {
@@ -50,7 +55,7 @@ h1 {
 
     &.landing {
 
-        border-width: 1px;
+        border-width: 0.75px;
 
         $landing-size: 250px;
         height: $landing-size;
@@ -101,7 +106,7 @@ h1 {
 .button {
     border: 0.5px solid $purple-dark;
     padding: 7px;
-    font-size: 15px;
+    font-size: 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

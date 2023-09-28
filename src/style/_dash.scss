@@ -1,18 +1,18 @@
 #dashboard-wrapper {
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
 #header-wrapper {
     transform: translateY(25%);
-    padding-left: 30px;
-    padding-right: 40px;
     display: flex;
     justify-content: space-between;
     align-content: center;
+    width: 100%;
     flex-wrap: wrap;
 }
 
@@ -50,7 +50,17 @@
     flex-direction: column;
     margin-top: 100px;
     width: 100%;
-    gap: 25px;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    flex-direction: column;
+    width: 80%;
+    max-width: 850px;
+    gap: 20px;
 }
 
 #divider {
@@ -63,20 +73,89 @@
 .blend-title-opts-wrapper {
 
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
 
     >a {
         text-decoration: none;
         font-style: normal;
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 7px;
     }
 }
 
-#dashboard-content {
+.blend-opts-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.dashboard-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    width: 100%;
 }
 
 #export {
     background-color: $purple-light;
+}
+
+#invite-link-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+#invite-wrapper {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#invite-title-opts-wrapper {
+    display: flex;
+    width: 102%;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+
+    >p {
+        font-size: 12px;
+    }
+    >a {
+        font-size: 12px;
+        margin-top: 10px;
+        text-underline-offset: 7px;
+    }
+}
+
+#invite {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border: 0.5px solid $purple-dark;
+    background-color: $purple-light;
+    padding: 5px;
+    font-size: 14px;
+}
+
+#empty-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 50px;
+    width: 100%;
 }
