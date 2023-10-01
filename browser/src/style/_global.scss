@@ -1,0 +1,168 @@
+body {
+    background-color: $grey;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Cousine', Courier, monospace;
+    color: $purple-dark;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    font-style: italic;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 0.75px;
+    color: $purple-dark;
+    transition: all 1s ease;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    transition: all 1s ease;
+}
+
+a:hover {
+    word-spacing: 5px;
+}
+
+h1 {
+    font-weight: bold;
+    font-style: italic;
+    margin: 0px;
+    font-size: 30px;
+    color: $purple-dark;
+    transition: all 1s ease;
+
+    @media (max-width: $condensed-max) {
+        font-size: 25px;
+    }
+
+    @media (max-width: $mobile-max) {
+        font-size: 20px;
+    }
+}
+
+.apple {
+    background-color: $red;
+}
+
+.spotify {
+    background-color: $green;
+}
+
+.venn-circle {
+    border-radius: 100%;
+    border: 0.5px solid $purple-dark;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    mix-blend-mode: darken;
+
+    &.landing {
+
+        border-width: 0.75px;
+
+        $landing-size: 200px;
+        @include venn-dims($landing-size);
+
+        &.spotify {
+            @include venn-overlap-width($landing-size);
+            @include venn-landing-offset($landing-size)
+        }
+
+        @media (max-width: $mobile-max) {
+            $landing-size-mobile: 150px;
+            @include venn-dims($landing-size-mobile);
+
+            &.spotify {
+                @include venn-overlap-width($landing-size-mobile);
+                @include venn-landing-offset($landing-size-mobile)
+            }
+
+        }
+    }
+
+    &.playlist {
+
+        transition: all 1s ease;
+
+        $playlist-size: 25px;
+        @include venn-dims($playlist-size);
+
+        &.spotify {
+            @include venn-overlap-width($playlist-size);
+        }
+
+        @media (max-width: 700px) {
+            $playlist-size-condensed: 15px;
+            @include venn-dims($playlist-size-condensed);
+
+            &.spotify {
+                @include venn-overlap-width($playlist-size-condensed);
+            }
+        }
+
+    }
+
+    &.icon {
+
+        $icon-size: 50px;
+        @include venn-dims($icon-size);
+
+        &.spotify {
+            @include venn-overlap-width($icon-size);
+            @include venn-landing-offset($icon-size);
+        }
+
+        @media (max-width: $mobile-max) {
+            $icon-size-mobile: 30px;
+            @include venn-dims($icon-size-mobile);
+
+            &.spotify {
+                @include venn-overlap-width($icon-size-mobile);
+                @include venn-landing-offset($icon-size-mobile);
+            }
+    
+        }
+    }
+
+    &.header {
+        $header-size: 15px;
+        height: $header-size;
+        width: $header-size;
+
+        &.venn-circle {
+            border-color: $purple-light;
+        }
+
+        &.spotify {
+            @include venn-overlap-width($header-size);
+            background-color: $purple-light;
+        }
+
+        &.apple {
+            background-color: $grey;
+        }
+    }
+}
+
+.button {
+    border: 0.5px solid $purple-dark;
+    padding: 7px;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    font-style: italic;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+

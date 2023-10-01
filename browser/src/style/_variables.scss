@@ -12,6 +12,7 @@ $purple-dark: #3C292D;
 /* ------------------------------- breakpoints ------------------------------ */
 $mobile-max: 480px;
 $desktop-min: 950px;
+$condensed-max: 700px;
 
 /* --------------------------------- mix-ins -------------------------------- */
 @mixin venn-overlap-width($width) {
@@ -20,6 +21,11 @@ $desktop-min: 950px;
 
 @mixin venn-landing-offset($width) {
     margin-top: calc($width * 0.5)
+}
+
+@mixin venn-dims($size) {
+    height: $size;
+    width: $size;
 }
 
 /* --------------------------------- styles --------------------------------- */

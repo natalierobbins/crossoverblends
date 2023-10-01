@@ -6,7 +6,9 @@ import './style/main.css'
 
 const router = createBrowserRouter([
   { path: '/', element: <App.Landing /> },
-  { path: '/<3/', element: <App.Dashboard /> },
+  { path: '/<3', element: <App.Dashboard page='home' /> },
+  { path: '/+', element: <App.Dashboard page='invite' /> },
+  { path: '&', element: <App.Dashboard page='playlist' />}
 ])
 
 
