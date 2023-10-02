@@ -8,8 +8,8 @@ export const Landing = () => {
     <div id='landing-wrapper'>
       <Venn type='landing' />
       <div id='log-in-wrapper' className='-flex -col'>
-        <Link to='/<3' className='log-in-link'>- log in with apple music</Link>
-        <Link to='/<3' className='log-in-link'>- log in with spotify</Link>
+        <Link to='http://localhost:400/api/login/spotify-redirect' className='log-in-link'>- log in with apple music</Link>
+        <Link to='http://localhost:400/api/login/spotify-redirect' className='log-in-link'>- log in with spotify</Link>
       </div>
     </div>
   );
